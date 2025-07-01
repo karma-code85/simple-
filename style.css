@@ -6,14 +6,11 @@
 }
 body{
    position: relative;
-   height: 100vh;
+   height: auto;
+   background-color: #efebeb;
+   /* border: 1px solid red; */
 }
-.main-container{
-  border: 1px solid red;
-  height: 100vh;
-  position: relative;
-  background-color: red;
-}
+
 .bg{
    background-color: hsl(264, 100%, 61%);
     height: 450px;
@@ -34,30 +31,36 @@ body{
   bottom: 0;
 }
 .continer{
-    background-color: hsl(270, 20%, 96%);
-    /* position: relative; */
+    background-color:hsl(280, 33%, 98%);
+    position: relative;
+    
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
+   
     /* padding: 70px; */
     /* border: 1px solid red; */
    
     
    
 }
+.main-continer{
+/* border: solid 1px green; */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
-.content{
-    
-    background-color: white;
+}
+.phone{
+  
+  background-color: white;
     border-radius: 10px;
-    width: 300px;
-    max-width: 80%;
-    
-    
-    height: 100vh;
+    width: 200px;
+    /* max-width: 80%; */
+    height: 90%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -65,7 +68,21 @@ body{
     align-items: center;
     padding: 7px;
     position: absolute;
+    top: 20px;
+    order: 1;
+    z-index: 2;
+}
 
+.content{
+    width: 100%;
+  height:400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: hsl(270, 20%, 96%);
+  border-radius: 10px;
+  gap: 3PX;
+  /* padding: 0 5px 5px 5px; */
 }
 img{
     width: 100%;
@@ -78,36 +95,41 @@ img{
     /* width:  224.67px;
     height: 66.33; */
     justify-content: center;
-    align-items: center;
+    align-items:center;
     border-radius: 15px 15px 3px 3px;
     gap: 20px;
    background: linear-gradient(to left, hsl(293, 100%, 63%),hsl(264, 100%, 61%));
-   padding: 20px;
+   height: 60px;
+   padding: 10px;
    position: relative;
 
  }
+ .fa-solid{
+  /* border: 1px solid red; */
+  align-self: baseline;
+ }
  .white{
-   width: 150px;
-   height: 20px;
+   width: 117px;
+   height: 12px;
    /* border: 1px solid red; */
    position: absolute;
    top: 0;
    background-color: white;
-   border-radius: 10px 10px 5px 5px ;
+   border-radius: 0 0 8px 8px ;
 }
  .hero img{
     border: 1px solid white;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
 
  }
  .last{
    position: absolute;
-   top: 500px;
+   /* top: 500px; */
    text-align: center;
    z-index: 1;
-   /* background-color: red; */
+   /* border: 1px solid red; */
 
  }
  .last h1{
@@ -117,10 +139,7 @@ img{
   color:  hsl(270, 7%, 64%)
 ;
  }
- .outline{
-  outline: none;
-  border: none;
- }
+ 
  .img-text{
     display: flex;
     /* height: 100%; */
@@ -133,7 +152,7 @@ img{
  }
  .img-text p{
    /* border: 1px solid red; */
-   font-size: 12px;
+   font-size: 10px;
  }
  .space{
    /* border: 1px solid red; */
@@ -143,20 +162,22 @@ img{
    gap: 10px;
  }
  .chat-area{
-    background-color: hsl(270, 20%, 96%);
+    /* background-color: hsl(270, 20%, 96%); */
     border-radius: 2px 2px 10px 10px;
     display: flex;
     flex-direction: column;
     gap: 5px;
     padding: 10px;
-    height: 100vh;
+    /* height: 100vh; */
+    width: 100%;
+    overflow-y: auto;
  }
  .dogs{
-    width:40px;
+    /* width:40px; */
     height: 40px;
     display: flex;
     gap: 5px;
-   /* align-self: flex-end; */
+   align-self: flex-end;
    
    
  }
@@ -166,29 +187,37 @@ img{
  .right{
     /* border: 1px solid red; */
     background-color: hsl(277, 90%, 92%);
-    width: 60%;
+    width: 80%;
     font-size: .6rem;
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
     color:  hsl(264, 100%, 61%);
  }
  .left{
     /* border: 1px solid red; */
     background-color:hsl(0, 0%, 100%);
-    width: 60%;
-    font-size: .8rem;
-    padding: 3px;
+    width: 70%;
+    font-size: .6rem;
+    padding: 5px;
     border-radius: 10px;
     display: flex;
     align-self: flex-end;
-    text-align: right;
+    
 
+ }
+ .line{
+  /* border: solid 1px red; */
+  display: flex;
+  align-self: flex-end;
  }
  .message{
   background-color:hsl(0, 0%, 100%) ;
-  width: 50%;
+  width: 60%;
   padding: 3px;
   border-radius: 10px;
+  font-size: .6rem;
+  display: flex;
+  align-self: flex-end;
  }
  .sent{
   background-color:hsl(0, 0%, 100%) ;
@@ -197,13 +226,21 @@ img{
    /* border: 1px solid red; */
    width: 80%;
    display: flex;
-   padding: 10px;
-   font-size:.7rem ;
+   padding: 5px;
+   font-size:.6rem ;
+   align-items: center;
    gap: 10px;
    color: white;
    background: linear-gradient(to right, hsl(293, 100%, 63%),hsl(264, 100%, 61%));
    border-radius: 10px;
  }
+ .right-side>span{
+  /* border: 1px solid red; */
+  align-items: flex-end;
+   justify-content: flex-end;
+
+ }
+ 
  input[type="radio"]{
    background-color: transparent;
    /* border: 1px solid red; */
@@ -216,17 +253,26 @@ img{
    align-self: flex-end;
  }
  .chevron{
-   /* border: 1px solid red; */
-   width: 100%;
-   padding: 10px;
+   width: 90%;
+   padding: 5px;
    display: flex;
    align-self: center;
    align-items: center;
    border-radius: 15px;
-   gap: 70px;
+   /* gap: 70px; */
    background-color: white;
    
  }
+ .outline{
+  outline: none;
+  border: none;
+  width: 90%;
+ }
+ /* #btn{
+  border: 2px solid red;
+  display: flex;
+  align-self: flex-end;
+ } */
  .chevron p{
    color:  hsl(206, 6%, 79%);
  }
@@ -234,12 +280,46 @@ img{
 /* border: 1px solid red; */
 display: flex;
 flex-direction: row;
-align-self: flex-end;
+/* flex-grow: 2; */
+align-self: center;
+
  }
  @media (min-width:768px) {
    .continer{
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
 
+   }
+   .main-continer{
+    display: flex;
+   }
+   .phone{
+    top: 40px;
+    left: 100px;
+    width: 200px;
+    bottom: 40px;
+
+   }
+   .last{
+    right: 100px;
+    height: 150px;
+    width: 300px;
+    text-align: left;
+    /* font-size: 1rem; */
+   }
+   .last p{
+    /* border: 1px solid red; */
+    font-size: .8rem;
+    line-height: 1.5;
+   }
+   .bg{
+    width: 230px;
+    height: 400px;
+   }
+   .bg-lf{
+    width: 230px;
+    height: 400px;
    }
    
  }
