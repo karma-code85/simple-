@@ -166,13 +166,18 @@ img{
     overflow-y: auto;
  }
  .dogs{
-    /* width:40px; */
-    height: 40px;
+    width:90%;
+    /* height: 40px; */
     display: flex;
     gap: 5px;
    align-self: flex-end;
    
    
+   
+ }
+ .dog>img{
+  /* border: 2px solid red; */
+  border-radius: 10px;
  }
  .dogs>img{
     border-radius: 10px;
